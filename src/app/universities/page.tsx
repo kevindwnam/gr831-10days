@@ -1,23 +1,5 @@
 import Link from "next/link";
-
-// TODO: 보건간호계열 운영 대학 추가 확인 시 healthTag: true 추가
-const universities = [
-  { name: "가천대학교", recruit: "1,038명", method: "논술 100%", csat: true, main: true, healthTag: true },
-  { name: "강남대학교", recruit: "309명", method: "논술 80% + 학생부 20%", csat: false, main: false, healthTag: false },
-  { name: "고려대학교 세종", recruit: "150명(자연)", method: "논술 100%", csat: true, main: false, healthTag: false },
-  { name: "국민대학교", recruit: "206명", method: "논술 100%", csat: true, main: false, healthTag: false },
-  { name: "삼육대학교", recruit: "272명", method: "논술 100%", csat: true, main: false, healthTag: false },
-  { name: "상명대학교", recruit: "98명", method: "논술 90% + 학생부 10%", csat: false, main: false, healthTag: false },
-  { name: "서경대학교", recruit: "214명", method: "논술 100%", csat: false, main: false, healthTag: false },
-  { name: "수원대학교", recruit: "432명", method: "논술 80% + 학생부 20%", csat: false, main: false, healthTag: false },
-  { name: "신한대학교", recruit: "192명", method: "논술 90% + 학생부 10%", csat: false, main: false, healthTag: false },
-  { name: "을지대학교", recruit: "214명", method: "논술 80% + 학생부 20%", csat: false, main: false, healthTag: false },
-  { name: "한국공학대학교", recruit: "200명", method: "논술 66.7% + 학생부 33.3%", csat: false, main: false, healthTag: false },
-  { name: "한국기술교육대학교", recruit: "150명", method: "논술전형", csat: false, main: false, healthTag: false },
-  { name: "한국외대 글로벌", recruit: "68명(자연)", method: "논술 100%", csat: true, main: false, healthTag: false },
-  { name: "한신대학교", recruit: "231명", method: "논술 80% + 학생부 20%", csat: false, main: false, healthTag: false },
-  { name: "홍익대학교 세종", recruit: "195명", method: "논술 90% + 학생부 10%", csat: true, main: false, healthTag: false },
-];
+import { universities } from "@/data/universities";
 
 export default function UniversitiesPage() {
   return (
@@ -42,12 +24,11 @@ export default function UniversitiesPage() {
             약술형논술 전형 운영 대학
           </h2>
           <p className="mt-3 text-sm leading-relaxed text-brand-black">
-            약술형논술 전형은 가천대학교를 중심으로 다수의 대학에서 운영하고
-            있습니다. 십일전략은 가천대학교를 비롯한 모든 대상 대학의 출제
-            패턴을 분석하여 합격을 위한 최적의 학습을 제공합니다.
+            2027학년도 기준 총 15개 대학에서 약술형논술 전형을 운영합니다. 각
+            대학별 입시 정보를 확인하세요.
           </p>
           <div className="mt-4 rounded-lg bg-red-50 p-3 text-xs text-brand-black">
-            📌 보건간호계열 운영 대학은 별도 표시
+            📌 메인 대학(MAIN) 및 보건간호계열 운영 대학은 별도 표시됩니다.
           </div>
         </div>
 
@@ -61,30 +42,39 @@ export default function UniversitiesPage() {
           </div>
           <div className="mt-4 flex flex-col gap-2">
             {universities.map((u) => (
-              <div
-                key={u.name}
-                className={`flex items-center justify-between rounded-xl p-4 ${u.main ? "border border-brand-red bg-red-50" : "bg-gray-50"}`}
+              <Link
+                key={u.slug}
+                href={`/universities/${u.slug}`}
+                className={`relative flex items-center justify-between overflow-hidden rounded-xl p-4 transition-all duration-200 hover:-translate-y-0.5 hover:shadow-md ${
+                  u.main
+                    ? "border-t-4 border-brand-red bg-red-50"
+                    : u.healthcare
+                      ? "border-l-4 border-brand-red bg-gray-50"
+                      : "bg-gray-50"
+                }`}
               >
-                <div>
-                  <p className="text-base font-bold">
-                    {u.name}
+                <div className="flex-1">
+                  <div className="flex items-center gap-2">
+                    <p className="text-base font-bold">{u.name}</p>
                     {u.main && (
-                      <span className="ml-2 text-xs font-medium text-brand-red">
-                        메인
+                      <span className="rounded-full bg-brand-red px-2 py-0.5 text-xs font-bold text-white">
+                        MAIN
                       </span>
                     )}
-                  </p>
+                  </div>
                   <p className="mt-0.5 text-xs text-brand-gray">
-                    {u.recruit} · {u.method}
-                    {u.csat ? " · 수능최저 있음" : ""}
+                    {u.transferType} · {u.recruit} · {u.method.split(" + ")[0]}
                   </p>
                 </div>
-                {u.healthTag && (
-                  <span className="shrink-0 rounded-full bg-brand-red px-2 py-1 text-xs text-white">
-                    보건간호
-                  </span>
-                )}
-              </div>
+                <div className="flex items-center gap-2">
+                  {u.healthcare && (
+                    <span className="shrink-0 rounded-full bg-brand-red px-2 py-0.5 text-xs font-bold text-white">
+                      보건간호
+                    </span>
+                  )}
+                  <span className="text-brand-gray">&gt;</span>
+                </div>
+              </Link>
             ))}
           </div>
         </div>
