@@ -45,8 +45,13 @@ export default function AboutPage() {
               className="h-12 w-auto"
             />
             <span className="mx-3 text-2xl text-brand-gray">&times;</span>
-            {/* TODO: GR831 로고 파일 받으면 이미지로 교체 */}
-            <span className="text-lg font-bold">GR831</span>
+            <Image
+              src="/images/logo-gr831.png"
+              alt="GR831 약술형논술 연구소"
+              width={180}
+              height={60}
+              className="h-[60px] w-auto"
+            />
           </div>
         </div>
 
@@ -124,30 +129,74 @@ export default function AboutPage() {
 
           <div className="mt-5 flex flex-col gap-3">
             {[
-              { initial: "황", subject: "수학", name: "황규훈 선생님", phrase: "완벽한, 완전한 약술 수학" },
-              { initial: "김", subject: "수학", name: "김후엽 선생님", phrase: "정확한 개념, 명확한 설명" },
-              { initial: "고", subject: "국어", name: "고원빈 선생님", phrase: "차이를 만드는 약술 국어" },
+              { slug: "hwang", subject: "수학", name: "황규훈 선생님", phrase: "완벽한, 완전한 약술 수학", youtube: "y-eem4vKBXI" },
+              { slug: "kim", subject: "수학", name: "김후엽 선생님", phrase: "정확한 개념, 명확한 설명", youtube: null },
+              { slug: "go", subject: "국어", name: "고원빈 선생님", phrase: "차이를 만드는 약술 국어", youtube: "x8tBXqu0Ot0" },
             ].map((t) => (
-              <div key={t.name} className="flex items-center rounded-xl bg-gray-50 p-4">
-                {/* TODO: 강사 사진 받으면 next/image로 교체 */}
-                <div className="flex h-16 w-16 shrink-0 items-center justify-center rounded-full border-2 border-brand-red bg-white">
-                  <span className="font-serif text-2xl font-black text-brand-red">
-                    {t.initial}
-                  </span>
+              <div
+                key={t.slug}
+                className="overflow-hidden rounded-xl bg-gray-50"
+              >
+                <div className="flex items-center p-4">
+                  <div className="h-20 w-20 shrink-0 overflow-hidden rounded-full border-2 border-brand-red">
+                    <Image
+                      src={`/images/instructors/${t.slug}.png`}
+                      alt={`${t.name} ${t.subject}`}
+                      width={80}
+                      height={80}
+                      className="h-full w-full object-cover"
+                    />
+                  </div>
+                  <div className="ml-4 flex-1">
+                    <p className="text-xs font-bold text-brand-red">
+                      {t.subject}
+                    </p>
+                    <p className="mt-0.5 text-base font-bold text-brand-black">
+                      {t.name}
+                    </p>
+                    <p className="mt-1 text-sm leading-tight text-brand-gray">
+                      {t.phrase}
+                    </p>
+                  </div>
                 </div>
-                <div className="ml-4 flex-1">
-                  <p className="text-xs font-bold text-brand-red">{t.subject}</p>
-                  <p className="mt-0.5 text-base font-bold text-brand-black">
-                    {t.name}
-                  </p>
-                  <p className="mt-1 text-sm text-brand-gray">{t.phrase}</p>
-                </div>
+                <details className="group border-t border-brand-border">
+                  <summary className="flex cursor-pointer list-none items-center justify-between p-4 transition hover:bg-white [&::-webkit-details-marker]:hidden">
+                    <span className="text-sm font-bold text-brand-black">
+                      강사 약력 &amp; 영상 보기
+                    </span>
+                    <span className="text-brand-gray transition-transform group-open:rotate-180">
+                      ▼
+                    </span>
+                  </summary>
+                  <div className="space-y-4 p-4 pt-0">
+                    <Image
+                      src={`/images/instructors/${t.slug}-bio.png`}
+                      alt={`${t.name} 약력`}
+                      width={600}
+                      height={900}
+                      className="w-full rounded-lg"
+                    />
+                    {t.youtube && (
+                      <>
+                        <p className="text-xs font-bold tracking-widest text-brand-red">
+                          강의 영상
+                        </p>
+                        <div className="aspect-video overflow-hidden rounded-lg">
+                          <iframe
+                            src={`https://www.youtube.com/embed/${t.youtube}`}
+                            width="100%"
+                            height="100%"
+                            allowFullScreen
+                            loading="lazy"
+                            title={`${t.name} 강의 영상`}
+                          />
+                        </div>
+                      </>
+                    )}
+                  </div>
+                </details>
               </div>
             ))}
-          </div>
-
-          <div className="mt-5 rounded-lg border border-brand-border bg-white p-3 text-center text-xs text-brand-gray">
-            * 강사진 상세 약력 및 사진은 곧 공개됩니다
           </div>
         </div>
 
