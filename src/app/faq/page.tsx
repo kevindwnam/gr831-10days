@@ -1,4 +1,11 @@
 import Link from "next/link";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "자주 묻는 질문 | 십일전략",
+  description:
+    "십일전략 수강 전 가장 자주 묻는 질문들을 모았습니다.",
+};
 
 const faqs = [
   {

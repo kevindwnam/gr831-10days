@@ -1,6 +1,13 @@
 import Image from "next/image";
 import Link from "next/link";
 import CountUp from "@/components/CountUp";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "십일전략 소개 | GR831이 만든 공식 온라인 브랜드",
+  description:
+    "2026학년도 135명 합격을 만든 GR831약술형논술연구소의 공식 온라인 브랜드, 십일전략을 소개합니다.",
+};
 
 export default function AboutPage() {
   return (

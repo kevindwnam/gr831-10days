@@ -1,4 +1,11 @@
 import Link from "next/link";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "커리큘럼 | 십일전략",
+  description:
+    "모의고사 정규반, 개념반, 11월 파이널 10일까지 연간 학습 흐름을 안내합니다.",
+};
 
 export default function CurriculumPage() {
   return (

@@ -4,7 +4,7 @@ import SectionHeader from "@/components/SectionHeader";
 
 export default function Home() {
   return (
-    <div className="mx-auto max-w-lg px-5">
+    <div className="mx-auto max-w-lg px-5 py-6">
       {/* Hero 카드 */}
       <div className="overflow-hidden rounded-2xl border-t-4 border-brand-red bg-white p-6 shadow-sm">
         <div className="flex flex-col items-center text-center">

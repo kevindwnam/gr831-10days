@@ -1,5 +1,12 @@
 import Link from "next/link";
 import { universities } from "@/data/universities";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "약술형논술 운영 대학 15개교 | 십일전략",
+  description:
+    "2027학년도 약술형논술 전형 운영 대학 15개교의 모집인원, 전형방법, 수능최저, 평가방법, 출제범위 안내.",
+};
 
 export default function UniversitiesPage() {
   return (

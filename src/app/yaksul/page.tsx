@@ -1,4 +1,11 @@
 import Link from "next/link";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "약술형논술이란? | 십일전략",
+  description:
+    "가천대학교 약술형논술 전형의 정의와 특징, 합격 전략을 안내합니다.",
+};
 
 export default function YaksulPage() {
   return (

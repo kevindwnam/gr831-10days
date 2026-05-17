@@ -1,5 +1,12 @@
 import Image from "next/image";
 import Link from "next/link";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "콘텐츠 & 학습 | 십일전략",
+  description:
+    "감독형 모의고사, 양방향 라이브 해설, 초정밀 성적표, 수요일 Q&A — 4대 핵심 시스템 안내.",
+};
 
 const systems = [
   {
