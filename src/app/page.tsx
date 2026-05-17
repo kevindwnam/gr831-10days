@@ -23,7 +23,7 @@ export default function Home() {
           </h1>
 
           <p className="mt-5 font-serif text-3xl font-black text-brand-red">
-            26학년도 가천대 135명 합격
+            26학년도 가천대학교 135명 합격
           </p>
           <p className="mt-1 text-sm text-brand-gray">
             가천대 약술형논술 · 전국 합격률 1위
