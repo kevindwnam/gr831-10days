@@ -109,6 +109,12 @@ export default function Home() {
             href="/content"
           />
           <MenuCard
+            icon="💬"
+            title="합격 수기"
+            subtitle="26학년도 76명의 합격생 이야기"
+            href="/reviews"
+          />
+          <MenuCard
             icon="🏅"
             title="명예의 전당"
             subtitle="26학년도 135명 합격생"

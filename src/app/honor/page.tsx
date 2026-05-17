@@ -55,17 +55,26 @@ export default function HonorPage() {
         {/* 카드 2: 탭 + 합격생 리스트 (Client Component) */}
         <HonorContent />
 
-        {/* 카드 3: 합격생 후기 placeholder */}
+        {/* 카드 3: 합격 수기 미리보기 */}
         <div className="rounded-2xl bg-white p-6">
-          <h2 className="font-serif text-lg font-bold">합격생 후기</h2>
-          <p className="mt-2 text-sm text-brand-gray">곧 공개됩니다</p>
-          {/* TODO: 합격생 사진 + 한줄후기 받으면 교체 */}
-          <div className="mt-4 rounded-xl bg-gray-50 p-6 text-center">
-            <p className="text-3xl text-brand-gray">💬</p>
-            <p className="mt-2 text-xs text-brand-gray">
-              합격생들의 생생한 후기를 준비 중입니다
-            </p>
+          <h2 className="font-serif text-lg font-bold">합격 수기</h2>
+          <p className="mt-2 text-sm text-brand-gray">
+            76명의 실제 합격생 이야기
+          </p>
+          <div className="mt-4 rounded-xl bg-brand-red p-4 text-center text-white">
+            <p className="font-serif text-5xl font-black">76</p>
+            <p className="mt-1 text-xs">개의 합격 수기</p>
           </div>
+          <p className="mt-4 text-sm text-brand-gray">
+            GR831 콘텐츠가 어떻게 합격에 도움이 되었는지, 합격생들이 직접
+            들려드립니다.
+          </p>
+          <Link
+            href="/reviews"
+            className="mt-4 block rounded-full bg-brand-red py-3 text-center font-bold text-white"
+          >
+            전체 합격 수기 보기 &rarr;
+          </Link>
         </div>
 
         {/* 카드 4: 동기부여 + CTA */}
