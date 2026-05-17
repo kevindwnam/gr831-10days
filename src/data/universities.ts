@@ -192,7 +192,8 @@ export const universities: University[] = [
     shortName: "수원대",
     transferType: "교과논술전형",
     main: false,
-    healthcare: false, // TODO: 간호학과 운영 여부 확인 필요
+    healthcare: true, // 2026-05 업데이트: 보건간호 운영 대학으로 확인됨
+    healthcareDepts: ["간호학과"], // TODO: 정확한 학과명은 추후 확인 필요
     recruit: "432명",
     method: "논술 80% + 학생부 20%",
     csat: false,
@@ -398,7 +399,8 @@ export const universities: University[] = [
     shortName: "신한대",
     transferType: "논술전형",
     main: false,
-    healthcare: false, // TODO: 간호 등 보건계열 확인 필요
+    healthcare: true, // 2026-05 업데이트: 보건간호 운영 대학으로 확인됨
+    healthcareDepts: ["간호학과"], // TODO: 정확한 학과명은 추후 확인 필요
     recruit: "192명",
     method: "논술 90% + 학생부(교과) 10%",
     csat: false,

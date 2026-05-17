@@ -110,17 +110,44 @@ export default function AboutPage() {
           </p>
         </div>
 
-        {/* 카드 4: 강사진 미니 */}
+        {/* 카드 4: 강사진 */}
         <div className="rounded-2xl bg-white p-6">
-          <h2 className="font-serif text-lg font-bold">
+          <p className="text-xs font-bold tracking-widest text-brand-red">
+            출제 의도를 가장 잘 아는 팀
+          </p>
+          <h2 className="mt-1 font-serif text-lg font-bold">
             GR831 자문위원 출신 강사진
           </h2>
-          <p className="mt-2 text-sm text-brand-gray">
-            가천대학교 약술형논술 자문위원 출신, 출제 의도를 가장 잘 아는 팀
+          <p className="mt-1 text-sm text-brand-gray">
+            가천대학교 약술형논술 자문위원 경력의 검증된 강사진
           </p>
-          {/* TODO: 강사진 사진 + 약력 받으면 교체 */}
-          <div className="mt-4 rounded-xl bg-gray-50 p-4 text-center text-xs text-brand-gray">
-            강사진 상세 정보는 곧 공개됩니다.
+
+          <div className="mt-5 flex flex-col gap-3">
+            {[
+              { initial: "황", subject: "수학", name: "황규훈 선생님", phrase: "완벽한, 완전한 약술 수학" },
+              { initial: "김", subject: "수학", name: "김후엽 선생님", phrase: "정확한 개념, 명확한 설명" },
+              { initial: "고", subject: "국어", name: "고원빈 선생님", phrase: "차이를 만드는 약술 국어" },
+            ].map((t) => (
+              <div key={t.name} className="flex items-center rounded-xl bg-gray-50 p-4">
+                {/* TODO: 강사 사진 받으면 next/image로 교체 */}
+                <div className="flex h-16 w-16 shrink-0 items-center justify-center rounded-full border-2 border-brand-red bg-white">
+                  <span className="font-serif text-2xl font-black text-brand-red">
+                    {t.initial}
+                  </span>
+                </div>
+                <div className="ml-4 flex-1">
+                  <p className="text-xs font-bold text-brand-red">{t.subject}</p>
+                  <p className="mt-0.5 text-base font-bold text-brand-black">
+                    {t.name}
+                  </p>
+                  <p className="mt-1 text-sm text-brand-gray">{t.phrase}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+
+          <div className="mt-5 rounded-lg border border-brand-border bg-white p-3 text-center text-xs text-brand-gray">
+            * 강사진 상세 약력 및 사진은 곧 공개됩니다
           </div>
         </div>
 

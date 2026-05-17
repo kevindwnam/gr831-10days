@@ -57,6 +57,13 @@ export default function CurriculumPage() {
               <p className="text-sm font-bold">매주 토요일 18:00 ~ 22:00</p>
             </div>
           </div>
+          <div className="mt-2 flex items-center gap-2 rounded-lg bg-red-50 p-3">
+            <span>📅</span>
+            <div>
+              <p className="text-xs font-bold text-brand-red">개강 안내</p>
+              <p className="text-sm font-bold">2026년 6월 6일(토)</p>
+            </div>
+          </div>
 
           <p className="mt-5 text-base font-bold">타임 테이블</p>
           <div className="mt-2 overflow-hidden rounded-lg border border-brand-border">
@@ -95,9 +102,6 @@ export default function CurriculumPage() {
             ))}
           </div>
 
-          <div className="mt-5 rounded-lg bg-red-50 p-3 text-xs text-brand-black">
-            📌 정확한 개강일은 카카오톡 채널을 통해 안내드립니다.
-          </div>
         </div>
 
         {/* 카드 3: 개념반 */}
@@ -126,6 +130,7 @@ export default function CurriculumPage() {
               ["수업 일정", "매주 화(수Ⅰ) · 목(수Ⅱ) 22:30 ~ 23:30"],
               ["수업 목표", "주말 모의고사 대비 필수 개념 탑재"],
               ["수업 특징", "주말 모의고사 사전 예습 시스템"],
+              ["개강 안내", "2026년 6월 2일(화) 개강"],
             ].map(([label, value]) => (
               <div key={label} className="flex items-start">
                 <span className="w-20 shrink-0 text-xs text-brand-gray">
@@ -145,8 +150,8 @@ export default function CurriculumPage() {
 
         {/* 카드 4: 11월 파이널 10일 */}
         <div className="relative rounded-2xl bg-brand-dark p-6 text-white">
-          <span className="absolute right-4 top-4 rounded-full bg-brand-red px-2 py-1 text-xs text-white">
-            Coming Soon
+          <span className="absolute right-4 top-4 rounded-full bg-brand-red px-3 py-1 text-xs font-bold text-white">
+            11/20 ~ 11/29
           </span>
           <p className="text-xs font-bold tracking-widest text-brand-red">
             수능 직전 마무리
@@ -158,12 +163,15 @@ export default function CurriculumPage() {
             10일 집중 프로그램으로 약술형논술 마지막 승부
           </p>
           <p className="mt-4 text-sm leading-relaxed text-gray-200">
-            11월 한 달, 10일간의 집중 프로그램으로 그동안의 학습을 점검하고
-            실전에 마지막으로 대비합니다. 가천대학교 약술형논술 출제 패턴에
-            최적화된 모의고사와 해설, 그리고 1:1 케어로 마무리합니다.
+            11월 20일부터 29일까지 총 10일간의 집중 프로그램으로 그동안의 학습을
+            점검하고 실전에 마지막으로 대비합니다. 가천대학교 약술형논술 출제
+            패턴에 최적화된 모의고사와 해설, 그리고 1:1 케어로 마무리합니다.
           </p>
           <div className="mt-5 rounded-lg bg-white/10 p-3 text-xs">
-            📌 정확한 일정과 신청 안내는 추후 공개됩니다.
+            📅 운영 기간: 2026년 11월 20일(금) ~ 11월 29일(일) · 10일간
+            <p className="mt-1 text-xs text-gray-400">
+              상세 시간표 및 신청 안내는 카카오톡 채널에서 확인하세요
+            </p>
           </div>
         </div>
 
