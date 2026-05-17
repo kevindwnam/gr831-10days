@@ -1,6 +1,9 @@
 import type { Metadata } from "next";
 import { Noto_Serif_KR } from "next/font/google";
 import localFont from "next/font/local";
+import Header from "@/components/Header";
+import Footer from "@/components/Footer";
+import FloatingCTA from "@/components/FloatingCTA";
 import "./globals.css";
 
 const notoSerifKR = Noto_Serif_KR({
@@ -33,7 +36,12 @@ export default function RootLayout({
       lang="ko"
       className={`${notoSerifKR.variable} ${pretendard.variable} h-full antialiased`}
     >
-      <body className="min-h-full flex flex-col font-sans">{children}</body>
+      <body className="min-h-full flex flex-col font-sans">
+        <Header />
+        <main className="flex-1">{children}</main>
+        <Footer />
+        <FloatingCTA />
+      </body>
     </html>
   );
 }
