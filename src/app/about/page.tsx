@@ -143,7 +143,7 @@ export default function AboutPage() {
             지금 카카오톡으로 상담받아보세요
           </p>
           <a
-            href="#"
+            href="http://pf.kakao.com/_kpsxfn" target="_blank" rel="noopener noreferrer"
             className="mt-3 inline-block rounded-full bg-brand-red px-6 py-3 font-bold text-white"
           >
             카카오톡 상담하기 &rarr;

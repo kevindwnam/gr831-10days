@@ -1,7 +1,7 @@
 export default function FloatingCTA() {
   return (
     <a
-      href="#"
+      href="http://pf.kakao.com/_kpsxfn" target="_blank" rel="noopener noreferrer"
       className="fixed bottom-6 right-6 z-50 flex h-14 w-14 items-center justify-center rounded-full bg-brand-red shadow-lg transition-transform hover:scale-110"
       aria-label="카카오톡 상담"
     >

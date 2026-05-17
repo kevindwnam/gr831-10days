@@ -79,7 +79,7 @@ export default function HonorPage() {
           </p>
           <div className="mt-5 flex gap-2">
             <a
-              href="#"
+              href="http://pf.kakao.com/_kpsxfn" target="_blank" rel="noopener noreferrer"
               className="flex-1 rounded-full bg-brand-red py-3 text-center text-sm font-bold text-white"
             >
               카카오톡 상담 &rarr;

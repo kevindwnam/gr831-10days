@@ -120,7 +120,7 @@ export default function FaqPage() {
             카카오톡 채널로 직접 문의해주세요
           </p>
           <a
-            href="#"
+            href="http://pf.kakao.com/_kpsxfn" target="_blank" rel="noopener noreferrer"
             className="mt-4 inline-block rounded-full bg-brand-red px-6 py-3 font-bold text-white"
           >
             카카오톡 1:1 문의 &rarr;
