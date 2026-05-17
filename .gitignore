@@ -43,3 +43,6 @@ next-env.d.ts
 # large asset files (originals)
 *.ai
 종이질감.png
+
+# reference data (not for deployment)
+/reference
