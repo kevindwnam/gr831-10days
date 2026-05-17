@@ -36,7 +36,7 @@ export default function RootLayout({
       lang="ko"
       className={`${notoSerifKR.variable} ${pretendard.variable} h-full antialiased`}
     >
-      <body className="min-h-full flex flex-col font-sans">
+      <body className="min-h-full flex flex-col font-sans bg-[#F7F7F7]">
         <Header />
         <main className="flex-1">{children}</main>
         <Footer />
