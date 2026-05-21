@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import CountUp from "@/components/CountUp";
+import InstructorCard from "@/components/InstructorCard";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -115,78 +116,94 @@ export default function AboutPage() {
           </p>
         </div>
 
-        {/* 카드 4: 강사진 */}
-        <div className="rounded-2xl bg-white p-6">
-          <div className="flex flex-col gap-3">
-            {[
-              { slug: "hwang", subject: "수학", name: "황규훈 선생님", phrase: "완벽한, 완전한 약술 수학", youtube: "y-eem4vKBXI" },
-              { slug: "kim", subject: "수학", name: "김후엽 선생님", phrase: "정확한 개념, 명확한 설명", youtube: null },
-              { slug: "go", subject: "국어", name: "고원빈 선생님", phrase: "차이를 만드는 약술 국어", youtube: "x8tBXqu0Ot0" },
-            ].map((t) => (
-              <div
-                key={t.slug}
-                className="overflow-hidden rounded-xl bg-gray-50"
-              >
-                <div className="flex items-center p-4">
-                  <div className="h-20 w-20 shrink-0 overflow-hidden rounded-full border-2 border-brand-red bg-gray-200">
-                    <Image
-                      src={`/images/instructors/${t.slug}.png`}
-                      alt={`${t.name} ${t.subject}`}
-                      width={160}
-                      height={160}
-                      className="h-full w-full object-cover object-right-top"
-                    />
-                  </div>
-                  <div className="ml-4 flex-1">
-                    <p className="text-[11px] font-semibold tracking-wider text-brand-red">
-                      {t.subject}
-                    </p>
-                    <p className="mt-0.5 text-base font-bold text-brand-black">
-                      {t.name}
-                    </p>
-                    <p className="mt-0.5 text-[13px] text-brand-gray">
-                      {t.phrase}
-                    </p>
-                  </div>
-                </div>
-                <details className="group border-t border-brand-border">
-                  <summary className="flex cursor-pointer list-none items-center justify-between px-4 py-3 text-sm font-medium text-brand-black transition hover:bg-white [&::-webkit-details-marker]:hidden">
-                    약력 &amp; 영상 보기
-                    <span className="text-xs text-brand-gray transition-transform group-open:rotate-180">
-                      ▼
-                    </span>
-                  </summary>
-                  <div className="space-y-4 px-4 pb-4">
-                    <Image
-                      src={`/images/instructors/${t.slug}-bio.png`}
-                      alt={`${t.name} 약력`}
-                      width={600}
-                      height={900}
-                      className="w-full rounded-lg"
-                    />
-                    {t.youtube && (
-                      <>
-                        <p className="text-xs font-bold tracking-widest text-brand-red">
-                          강의 영상
-                        </p>
-                        <div className="aspect-video overflow-hidden rounded-lg">
-                          <iframe
-                            src={`https://www.youtube.com/embed/${t.youtube}`}
-                            width="100%"
-                            height="100%"
-                            allowFullScreen
-                            loading="lazy"
-                            title={`${t.name} 강의 영상`}
-                          />
-                        </div>
-                      </>
-                    )}
-                  </div>
-                </details>
-              </div>
-            ))}
-          </div>
-        </div>
+        {/* 강사진 카드 — 황규훈 */}
+        <InstructorCard
+          subject="수학"
+          name="황규훈 선생님"
+          phrase="완벽한, 완전한 약술 수학"
+          slug="hwang"
+          youtube="y-eem4vKBXI"
+          career={[
+            "현) 정율사관학원 수학과 대표 강사",
+            "전) 대치 러셀 수학 강사",
+            "전) 강남 러셀 수학 강사 / 방학특강 마감",
+          ]}
+          features={[
+            "재밌는 수업, 그 속에서 수학의 본질을 꿰뚫어 성적을 확실히 올리는 수업",
+            "수능 대비 13년 고퀄리티 수능대비·약술대비 자체교재 수업",
+            "사고력과 논리를 강조한 PBL(Problem Based Learning) 수업",
+            "출제 기조를 반영한 족집게 수업",
+          ]}
+          management={[
+            "모든 수업시간 출결·전시간복습·과제 기본 점검 및 개선방향 피드백 제공",
+            "24시간 강사직접 질의응답 진행",
+            "13년차 강사 시선의 맞춤형 공부법 교정",
+            "최상위권을 위한 질문법 교정 클리닉",
+            "학습의지와 지속성 개선 관리",
+            "개개인 별 약점 분석 및 개별 약점 자료 상시 제공",
+            "직접 제작한 개념노트 손필기 제공",
+          ]}
+        />
+
+        {/* 강사진 카드 — 김후엽 */}
+        <InstructorCard
+          subject="수학"
+          name="김후엽 선생님"
+          phrase="정확한 개념, 명확한 설명"
+          slug="kim"
+          career={[
+            "현) 정율사관학원 수학과 대표 강사",
+            "한국교원대 러닝퍼실리테이터 인증 교육 수료",
+          ]}
+          features={[
+            "기출문제로 구성된 자체제작 주제별 수업",
+            "1등급 변별문항을 위한 고난이도 주제별 수업",
+            "매시간 백지 이론 테스트로 숙지 확인 및 점검",
+            "오답문항 약점문제 제작 반복학습",
+            "학생 학습데이터 기반 피드백 진행",
+            "수능기본개념완성 → 기출 주제별 수업 → 파이널",
+            "일일과제를 통한 학습 루틴관리",
+            "설명하는 공부와 튜터링으로 메타인지 능력 향상",
+            "매주 모의고사 진행 후 상세 성적표 제공",
+          ]}
+          management={[
+            "매 시간 과제·소요시간·풀이과정에 대한 개별 피드백",
+            "매 모의고사 후 학습데이터 기반 목표 상담 진행",
+            "학생 질문능력 개선을 위한 질문 클리닉 제공",
+            "야간 온라인 첨삭 및 철저한 오답노트 관리",
+            "과제 누락자·테스트 미출자 야간온라인 추가관리",
+          ]}
+        />
+
+        {/* 강사진 카드 — 고원빈 */}
+        <InstructorCard
+          subject="국어"
+          name="고원빈 선생님"
+          phrase="차이를 만드는 약술 국어"
+          slug="go"
+          youtube="x8tBXqu0Ot0"
+          career={[
+            "현) 정율사관학원 국어과 수능 대표 강사",
+            "현) 정율사관학원 사업 부장",
+            "전) 정율사관학원 국어과 팀장",
+            "전) 인서울학원 국어 강사",
+          ]}
+          features={[
+            "수업 만족도와 실적이 입증하는, 성적을 올리는 수업",
+            "최상위 1등급을 위한 가장 완성도 높은 국어 수업",
+            "수능 대비 10년간 매진한 고퀄리티 수능국어 자료",
+            "문학: 누구나 적용 가능한 객관적 감상과 분석",
+            "독서: 밀도 높은 기출 지문 분석으로 논리적 사고 함양",
+            "언매: 언어 개념 정립 및 제시문 분석 능력 고양",
+            "화작: 지문별·유형별 풀이전략 기반 효율적 풀이",
+          ]}
+          management={[
+            "완벽한 기본기 — 가장 기본적인 것들을 완벽하게 수행하는 관리",
+            "적당한 통제력 — 과제와 테스트 오답 정리까지 마무리하도록 통제",
+            "맞춤형 피드백 — 학생들의 점진적 성장을 위해 개인 맞춤형 피드백 제공",
+            "유연한 인간미 — 때로는 엄하게, 때로는 친근하게 학생들을 대합니다",
+          ]}
+        />
 
         {/* 카드 5: 슬로건 */}
         <div className="rounded-2xl bg-white p-8 text-center">
