@@ -37,7 +37,7 @@ export default function Home() {
           <div className="mt-5 w-full border-t border-brand-border" />
 
           <p className="mt-4 text-base font-bold text-brand-black">
-            GR831 자문위원 출신 강사진
+            GR831 자문위원출신이 만든 온라인 브랜드
           </p>
           <p className="mt-1 text-sm text-brand-gray">
             출제 의도를 가장 잘 아는 팀
