@@ -8,7 +8,7 @@ export const metadata: Metadata = {
     "감독형 모의고사, 양방향 라이브 해설, 초정밀 성적표, 수요일 Q&A — 4대 핵심 시스템 안내.",
 };
 
-const systems = [
+const systemsBefore = [
   {
     num: "01",
     sub: "실전보다 더 실전 같은",
@@ -23,13 +23,9 @@ const systems = [
     image: "/images/system/system-02-live.png",
     body: "일방적인 인강은 그만! 강사진과 실시간으로 소통하며 헷갈렸던 문제와 개념을 그 자리에서 명쾌하게 해결합니다.",
   },
-  {
-    num: "03",
-    sub: "내 약점을 꿰뚫어보는",
-    title: "초정밀 성적 분석표",
-    image: "/images/system/system-03-report.png",
-    body: "단순한 점수 확인을 넘어섭니다. 매 시험마다 문항별 분석과 취약점 진단이 포함된 1:1 맞춤형 성적표를 제공하여, 확실한 성적 향상의 길을 제시합니다.",
-  },
+];
+
+const systemsAfter = [
   {
     num: "04",
     sub: "심야의 밀착 케어",
@@ -68,8 +64,89 @@ export default function ContentPage() {
           </p>
         </div>
 
-        {/* 카드 2~5: 4대 시스템 */}
-        {systems.map((s) => (
+        {/* SYSTEM 01, 02 */}
+        {systemsBefore.map((s) => (
+          <div key={s.num} className="rounded-2xl bg-white p-6">
+            <div className="flex items-start justify-between">
+              <span className="font-serif text-5xl font-black leading-none text-brand-red">
+                {s.num}
+              </span>
+              <span className="pt-3 text-xs tracking-widest text-brand-gray">
+                SYSTEM
+              </span>
+            </div>
+            <p className="mt-3 text-sm font-bold text-brand-red">{s.sub}</p>
+            <h3 className="mt-1 font-serif text-xl font-bold text-brand-black">
+              {s.title}
+            </h3>
+            <div className="mt-4 overflow-hidden rounded-xl">
+              <Image
+                src={s.image}
+                alt={s.title}
+                width={600}
+                height={400}
+                className="h-auto w-full object-cover"
+              />
+            </div>
+            <p className="mt-4 text-sm leading-relaxed text-brand-black">
+              {s.body}
+            </p>
+          </div>
+        ))}
+
+        {/* SYSTEM 03: 초정밀 성적 분석표 — 커스텀 2장 이미지 */}
+        <div className="rounded-2xl bg-white p-6">
+          <div className="flex items-start justify-between">
+            <span className="font-serif text-5xl font-black leading-none text-brand-red">
+              03
+            </span>
+            <span className="pt-3 text-xs tracking-widest text-brand-gray">
+              SYSTEM
+            </span>
+          </div>
+          <p className="mt-3 text-sm font-bold text-brand-red">
+            내 약점을 꿰뚫어보는
+          </p>
+          <h3 className="mt-1 font-serif text-xl font-bold text-brand-black">
+            초정밀 성적 분석표
+          </h3>
+          <p className="mt-4 text-sm leading-relaxed text-brand-black">
+            단순한 점수 확인을 넘어섭니다. 매 시험마다 문항별 분석과 취약점 진단이
+            포함된 1:1 맞춤형 성적표를 제공하여, 확실한 성적 향상의 길을
+            제시합니다.
+          </p>
+
+          {/* 성적표 대시보드 */}
+          <div className="mt-5 overflow-hidden rounded-xl border border-gray-100 shadow-sm">
+            <Image
+              src="/images/system/report-dashboard.png"
+              alt="성적 분석표 대시보드 — 학습 완성 현황, 성취도, 점수 요약"
+              width={600}
+              height={800}
+              className="h-auto w-full"
+            />
+          </div>
+          <p className="mt-2 text-center text-xs text-brand-gray">
+            학습 완성 현황 · 성취도 · 점수 요약을 한눈에
+          </p>
+
+          {/* 문항별 세부 분석 */}
+          <div className="mt-4 overflow-hidden rounded-xl border border-gray-100 shadow-sm">
+            <Image
+              src="/images/system/report-detail.png"
+              alt="문항별 세부 분석 — 분류, 점수, 난이도, 반영 여부"
+              width={600}
+              height={800}
+              className="h-auto w-full"
+            />
+          </div>
+          <p className="mt-2 text-center text-xs text-brand-gray">
+            문항별 세부 분석 · 난이도 · 반영 여부까지 정밀 진단
+          </p>
+        </div>
+
+        {/* SYSTEM 04 */}
+        {systemsAfter.map((s) => (
           <div key={s.num} className="rounded-2xl bg-white p-6">
             <div className="flex items-start justify-between">
               <span className="font-serif text-5xl font-black leading-none text-brand-red">
