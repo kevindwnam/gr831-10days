@@ -9,11 +9,11 @@ export default function Home() {
       <div className="overflow-hidden rounded-2xl border-t-4 border-brand-red bg-white p-6 shadow-sm">
         <div className="flex flex-col items-center text-center">
           <Image
-            src="/images/logo-light.jpg"
+            src="/images/logo-transparent.png"
             alt="십일전략"
-            width={200}
-            height={60}
-            className="h-[60px] w-auto"
+            width={280}
+            height={100}
+            className="h-[80px] w-auto"
           />
 
           <h1 className="mt-4 font-serif text-2xl font-black leading-tight text-brand-black">
@@ -37,7 +37,7 @@ export default function Home() {
           <div className="mt-5 w-full border-t border-brand-border" />
 
           <p className="mt-4 text-base font-bold text-brand-black">
-            GR831 자문위원출신이 만든 온라인 브랜드
+            GR831약술형논술연구소 콘텐츠
           </p>
           <p className="mt-1 text-sm text-brand-gray">
             출제 의도를 가장 잘 아는 팀
