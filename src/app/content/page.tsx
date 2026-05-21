@@ -116,14 +116,15 @@ export default function ContentPage() {
             제시합니다.
           </p>
 
-          {/* 성적표 대시보드 */}
-          <div className="mt-5 overflow-hidden rounded-xl border border-gray-100 shadow-sm">
+          {/* 성적표 대시보드 — 상단 GR831 헤더 크롭 */}
+          <div className="mt-5 overflow-hidden rounded-2xl border border-gray-200 shadow-md">
             <Image
               src="/images/system/report-dashboard.png"
               alt="성적 분석표 대시보드 — 학습 완성 현황, 성취도, 점수 요약"
               width={600}
               height={800}
               className="h-auto w-full"
+              style={{ marginTop: "-25%" }}
             />
           </div>
           <p className="mt-2 text-center text-xs text-brand-gray">
@@ -131,7 +132,7 @@ export default function ContentPage() {
           </p>
 
           {/* 문항별 세부 분석 */}
-          <div className="mt-4 overflow-hidden rounded-xl border border-gray-100 shadow-sm">
+          <div className="mt-4 overflow-hidden rounded-2xl border border-gray-200 shadow-md">
             <Image
               src="/images/system/report-detail.png"
               alt="문항별 세부 분석 — 분류, 점수, 난이도, 반영 여부"
