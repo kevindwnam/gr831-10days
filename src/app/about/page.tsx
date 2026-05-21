@@ -38,7 +38,7 @@ export default function AboutPage() {
           </p>
           <div className="mt-4 flex items-center justify-center">
             <Image
-              src="/images/logo-light.jpg"
+              src="/images/logo-transparent.png"
               alt="십일전략"
               width={140}
               height={48}
