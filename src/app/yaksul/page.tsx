@@ -115,12 +115,12 @@ export default function YaksulPage() {
             통한 부분 점수까지 획득하는 것이 중요합니다. 출제 의도를 정확히
             파악하고 짧은 분량 안에 핵심을 정리하는 훈련이 필수입니다.
           </p>
-          <div className="mt-4 rounded-xl bg-brand-dark p-4 text-center">
-            <p className="text-sm font-bold text-white">
-              출제 의도를 가장 잘 아는 팀
+          <div className="mt-4 rounded-xl bg-gray-50 p-4 text-center">
+            <p className="text-sm font-bold text-brand-black">
+              GR831약술형논술연구소 콘텐츠
             </p>
-            <p className="mt-1 text-xs text-gray-300">
-              GR831 가천대 자문위원 출신 강사진
+            <p className="mt-1 text-xs text-brand-gray">
+              출제 의도를 가장 잘 아는 팀이 만든 온라인 브랜드
             </p>
           </div>
         </div>
