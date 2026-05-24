@@ -35,46 +35,6 @@ export default function CurriculumPage() {
           </p>
         </div>
 
-        {/* 인강 vs 십일전략 비교 카드 */}
-        <div className="rounded-2xl bg-white p-6">
-          <p className="text-xs font-bold tracking-widest text-brand-red">
-            WHY 십일전략
-          </p>
-          <h2 className="mt-1 font-serif text-lg font-bold">
-            왜 인강이 아니라 라이브 수업인가
-          </h2>
-          <p className="mt-3 text-sm leading-relaxed text-brand-black">
-            십일전략은 단순한 인강이 아닙니다. 실시간으로 강사진과 소통하며 학습
-            데이터까지 분석되는 양방향 참여형 수업입니다.
-          </p>
-
-          <div className="mt-5 overflow-hidden rounded-xl border border-brand-border">
-            <div className="grid grid-cols-3 gap-2 bg-gray-50 p-3 text-xs font-bold">
-              <span className="text-brand-gray">구분</span>
-              <span className="text-center text-brand-gray">기존 인강</span>
-              <span className="text-center text-brand-red">십일전략</span>
-            </div>
-            <div className="divide-y divide-brand-border">
-              {[
-                ["소통", "일방적", "양방향 실시간"],
-                ["몰입도", "낮음", "최고"],
-                ["피드백", "거의 없음", "실시간 가능"],
-                ["학습 데이터", "없음", "패턴 분석"],
-                ["반복 학습", "녹화만", "라이브+녹화"],
-              ].map(([label, old, strategy]) => (
-                <div
-                  key={label}
-                  className="grid grid-cols-3 items-center gap-2 p-3 text-xs"
-                >
-                  <span className="font-bold">{label}</span>
-                  <span className="text-center text-brand-gray">{old}</span>
-                  <span className="text-center font-bold">{strategy}</span>
-                </div>
-              ))}
-            </div>
-          </div>
-        </div>
-
         {/* 카드 2: 모의고사 정규반 */}
         <div className="overflow-hidden rounded-2xl border-t-4 border-brand-red bg-white p-6">
           <p className="text-xs font-bold tracking-widest text-brand-red">

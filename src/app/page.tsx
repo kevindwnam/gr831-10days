@@ -72,6 +72,12 @@ export default function Home() {
             href="/about"
           />
           <MenuCard
+            icon="👨‍🏫"
+            title="강사진"
+            subtitle="가천대 약술형논술 자문위원 출신"
+            href="/faculty"
+          />
+          <MenuCard
             icon="📖"
             title="약술형논술이란?"
             subtitle="정의 · 특징 · 출제 범위 · 전략"
