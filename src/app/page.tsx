@@ -1,4 +1,3 @@
-import Image from "next/image";
 import MenuCard from "@/components/MenuCard";
 import SectionHeader from "@/components/SectionHeader";
 
@@ -7,57 +6,61 @@ export default function Home() {
     <div className="mx-auto max-w-lg px-5 py-6">
       {/* Hero 카드 */}
       <div className="overflow-hidden rounded-2xl border-t-4 border-brand-red bg-white p-6 shadow-sm">
-        <div className="flex flex-col items-center text-center">
-          <Image
-            src="/images/logo-transparent.png"
-            alt="십일전략"
-            width={280}
-            height={100}
-            className="h-[80px] w-auto"
-          />
+        <p className="text-xs font-bold tracking-widest text-brand-red">
+          GR831 약술형논술 연구소
+        </p>
 
-          <h1 className="mt-4 font-serif text-2xl font-black leading-tight text-brand-black">
-            약술형논술,
-            <br />
-            십일전략이 답입니다
-          </h1>
+        <h1 className="mt-4 font-serif text-2xl font-black leading-tight">
+          약술형논술로 만든
+          <br />
+          <span className="text-brand-red">합격의 공식</span>
+        </h1>
 
-          <p className="mt-5 font-serif text-3xl font-black text-brand-red">
-            26학년도 가천대학교 135명 합격
-          </p>
-          <p className="mt-1 text-sm text-brand-gray">
-            가천대 약술형논술 · 전국 합격률 1위
-          </p>
+        <p className="mt-4 text-sm leading-relaxed text-brand-gray">
+          GR831약술형논술연구소의 온라인 학습 브랜드 &ldquo;십일전략&rdquo;은
+          2026학년도 가천대 135명 합격을 만들어낸 약술형논술 전문 학습
+          시스템입니다.
+        </p>
 
-          <p className="mt-4 flex items-center gap-1 text-lg font-bold text-brand-red">
-            <span className="text-xs">※</span>
-            34명 보건간호계열 합격
-          </p>
-
-          <div className="mt-5 w-full border-t border-brand-border" />
-
-          <p className="mt-4 text-base font-bold text-brand-black">
-            GR831약술형논술연구소 콘텐츠
-          </p>
-          <p className="mt-1 text-sm text-brand-gray">
-            출제 의도를 가장 잘 아는 팀
-          </p>
-
-          <p className="mt-5 text-xs text-brand-gray">
-            ── 합격 역사 ──
-          </p>
-          <div className="mt-2 grid w-full grid-cols-2 gap-2">
-            <div className="rounded-lg bg-brand-dark px-3 py-2 text-center text-white">
-              <span className="text-xs">24학년도</span>
-              <br />
-              <span className="text-sm font-bold">98명 합격</span>
+        {/* 핵심 가치 4줄 */}
+        <div className="mt-5 space-y-2.5">
+          {[
+            "검증된 합격 실적 · 3개년 누적 353명",
+            "참여형 라이브 수업 · ClassIn 양방향 소통",
+            "매일 받는 학습 콘텐츠 · 매일국어 1컷 + 47회 모의고사",
+            "데이터로 입증된 출제 적중률 · 수학 90% / 국어 80%",
+          ].map((text) => (
+            <div key={text} className="flex items-start gap-3">
+              <span className="shrink-0 font-bold text-brand-red">✓</span>
+              <span className="text-sm">{text}</span>
             </div>
-            <div className="rounded-lg bg-brand-dark px-3 py-2 text-center text-white">
-              <span className="text-xs">25학년도</span>
-              <br />
-              <span className="text-sm font-bold">120명 합격</span>
+          ))}
+        </div>
+
+        {/* 합격 실적 박스 */}
+        <div className="mt-6 border-t border-brand-border pt-6">
+          <p className="mb-3 text-center text-xs tracking-widest text-brand-gray">
+            가천대학교 합격생 추이
+          </p>
+          <div className="grid grid-cols-3 gap-3">
+            <div className="text-center">
+              <p className="font-serif text-2xl font-black">98</p>
+              <p className="text-[10px] text-brand-gray">24학년도</p>
+            </div>
+            <div className="text-center">
+              <p className="font-serif text-2xl font-black">120</p>
+              <p className="text-[10px] text-brand-gray">25학년도</p>
+            </div>
+            <div className="text-center">
+              <p className="font-serif text-3xl font-black text-brand-red">
+                135
+              </p>
+              <p className="text-[10px] font-bold text-brand-red">26학년도</p>
             </div>
           </div>
+          <p className="mt-3 text-center text-[10px] text-brand-gray">
+            GR831약술형논술연구소 · 전국 최다 합격률
+          </p>
         </div>
       </div>
 
@@ -74,7 +77,7 @@ export default function Home() {
           <MenuCard
             icon="👨‍🏫"
             title="강사진"
-            subtitle="가천대 약술형논술 자문위원 출신"
+            subtitle="약술형논술 온라인 전문 강사진"
             href="/faculty"
           />
           <MenuCard

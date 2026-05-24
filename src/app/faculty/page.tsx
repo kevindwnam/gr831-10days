@@ -4,7 +4,7 @@ import type { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "강사진 | 십일전략",
-  description: "가천대학교 약술형논술 자문위원 출신 강사진을 소개합니다.",
+  description: "약술형논술 온라인 전문 강사진을 소개합니다.",
 };
 
 export default function FacultyPage() {
@@ -19,7 +19,7 @@ export default function FacultyPage() {
       <div className="mt-3 text-center">
         <h1 className="font-serif text-xl font-black">강사진</h1>
         <p className="mt-1 text-sm text-brand-gray">
-          가천대 약술형논술 자문위원 출신
+          약술형논술 온라인 전문 강사진
         </p>
       </div>
 
@@ -27,12 +27,12 @@ export default function FacultyPage() {
         {/* 인트로 카드 */}
         <div className="overflow-hidden rounded-2xl border-t-4 border-brand-red bg-white p-6">
           <h2 className="font-serif text-lg font-bold">
-            가천대를 가장 잘 아는 강사진
+            약술형논술 온라인 전문 강사진
           </h2>
           <p className="mt-3 text-sm leading-relaxed text-brand-black">
             GR831약술형논술연구소는 가천대학교 약술형논술 자문위원 출신
-            연구원들로 구성된 6년차 전문 기관입니다. 출제 의도를 가장 잘 아는
-            팀이 직접 콘텐츠를 제작하고 강의합니다.
+            연구원들로 구성된 6년차 전문 기관입니다. 이 연구소의 콘텐츠를 바탕으로
+            약술형논술 온라인 강의에 특화된 전문 강사진이 직접 수업합니다.
           </p>
         </div>
 

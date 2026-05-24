@@ -70,7 +70,7 @@ export default function AboutPage() {
               {
                 num: "2",
                 title: "검증된 강사진",
-                desc: "가천대학교 약술형논술 자문위원 출신, GR831의 전문 강사진이 직접 진행합니다.",
+                desc: "GR831의 콘텐츠를 바탕으로, 약술형논술 온라인 전문 강사진이 직접 진행합니다.",
               },
               {
                 num: "3",
@@ -253,10 +253,10 @@ export default function AboutPage() {
             강사진
           </p>
           <h2 className="mt-1 font-serif text-lg font-bold">
-            가천대 약술형논술 자문위원 출신
+            약술형논술 온라인 전문 강사진
           </h2>
           <p className="mt-3 text-sm leading-relaxed text-brand-black">
-            GR831의 강사진은 가천대학교 약술형논술 자문위원 출신을 비롯한 6년차
+            십일전략의 강사진은 약술형논술 온라인 강의에 특화된 6년차
             전문가들로 구성되어 있습니다.
           </p>
           <Link
