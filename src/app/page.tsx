@@ -7,7 +7,7 @@ export default function Home() {
       {/* Hero 카드 */}
       <div className="overflow-hidden rounded-2xl border-t-4 border-brand-red bg-white p-6 shadow-sm">
         <p className="text-xs font-bold tracking-widest text-brand-red">
-          GR831 약술형논술 연구소
+          ABBREVIATED ESSAY · 약술형논술 전문
         </p>
 
         <h1 className="mt-4 font-serif text-2xl font-black leading-tight">
@@ -17,9 +17,13 @@ export default function Home() {
         </h1>
 
         <p className="mt-4 text-sm leading-relaxed text-brand-gray">
-          GR831약술형논술연구소의 온라인 학습 브랜드 &ldquo;십일전략&rdquo;은
-          2026학년도 가천대 135명 합격을 만들어낸 약술형논술 전문 학습
-          시스템입니다.
+          <strong className="text-brand-black">십일전략</strong>은 2026학년도{" "}
+          <strong className="text-brand-black">가천대 135명 합격</strong>을 만든{" "}
+          <strong className="text-brand-black">
+            약술형논술 전문 라이브 학습 브랜드
+          </strong>
+          입니다. 참여형 온라인 수업과 정밀하게 설계된 학습 콘텐츠로 합격까지
+          책임집니다.
         </p>
 
         {/* 핵심 가치 4줄 */}
@@ -59,7 +63,7 @@ export default function Home() {
             </div>
           </div>
           <p className="mt-3 text-center text-[10px] text-brand-gray">
-            GR831약술형논술연구소 · 전국 최다 합격률
+            십일전략 · 약술형논술 전국 최다 합격률
           </p>
         </div>
       </div>
