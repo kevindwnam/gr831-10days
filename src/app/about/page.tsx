@@ -155,6 +155,98 @@ export default function AboutPage() {
           </div>
         </div>
 
+        {/* 감독형 온라인 모의고사 카드 */}
+        <div className="rounded-2xl bg-white p-6">
+          <p className="text-xs font-bold tracking-widest text-brand-red">
+            운영 방식 · MOCK EXAM
+          </p>
+          <h2 className="mt-1 font-serif text-xl font-bold">
+            감독형 온라인 모의고사
+          </h2>
+          <p className="mt-1 text-sm font-bold text-brand-red">
+            실전보다 더 실전 같은
+          </p>
+          <div className="mt-4 overflow-hidden rounded-xl">
+            <Image
+              src="/images/system/system-01-exam.png"
+              alt="감독형 온라인 모의고사"
+              width={600}
+              height={400}
+              className="h-auto w-full object-cover"
+            />
+          </div>
+          <p className="mt-4 text-sm leading-relaxed text-brand-black">
+            집에서 응시해도 긴장감은 최고조! 철저한 감독 하에 진행되어 실제
+            고사장과 동일한 환경에서 실전 감각을 극대화합니다.
+          </p>
+        </div>
+
+        {/* 양방향 라이브 해설 카드 */}
+        <div className="rounded-2xl bg-white p-6">
+          <p className="text-xs font-bold tracking-widest text-brand-red">
+            운영 방식 · LIVE CLASS
+          </p>
+          <h2 className="mt-1 font-serif text-xl font-bold">
+            양방향 라이브 해설
+          </h2>
+          <p className="mt-1 text-sm font-bold text-brand-red">
+            소통하며 만들어가는
+          </p>
+          <div className="mt-4 overflow-hidden rounded-xl">
+            <Image
+              src="/images/system/system-02-live.png"
+              alt="양방향 라이브 해설"
+              width={600}
+              height={400}
+              className="h-auto w-full object-cover"
+            />
+          </div>
+          <p className="mt-4 text-sm leading-relaxed text-brand-black">
+            일방적인 인강은 그만! 강사진과 실시간으로 소통하며 헷갈렸던 문제와
+            개념을 그 자리에서 명쾌하게 해결합니다.
+          </p>
+
+          {/* ClassIn 5가지 기능 */}
+          <div className="mt-5 rounded-xl bg-gray-50 p-4">
+            <p className="mb-3 text-xs font-bold tracking-widest text-brand-red">
+              CLASSIN · 5가지 기능
+            </p>
+            <div className="flex flex-col gap-2 text-xs">
+              <div className="flex items-start gap-2">
+                <span>📹</span>
+                <span>
+                  <strong>실시간 화상 강의</strong> · 강사·조교·학생 전원 캠 ON
+                </span>
+              </div>
+              <div className="flex items-start gap-2">
+                <span>✏️</span>
+                <span>
+                  <strong>디지털 칠판 + 화판</strong> · 강사 칠판과 학생 필기
+                  동기화
+                </span>
+              </div>
+              <div className="flex items-start gap-2">
+                <span>📊</span>
+                <span>
+                  <strong>LMS 통합 관리</strong> · 과제 제출·채점·코멘트
+                </span>
+              </div>
+              <div className="flex items-start gap-2">
+                <span>🎬</span>
+                <span>
+                  <strong>수업 녹화본 저장</strong> · 복습 시청 가능
+                </span>
+              </div>
+              <div className="flex items-start gap-2">
+                <span>🎯</span>
+                <span>
+                  <strong>시험 감독 기능</strong> · 백색소음·타이머·캠 모니터링
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+
         {/* 강사진 안내 카드 */}
         <div className="rounded-2xl bg-white p-6">
           <p className="text-xs font-bold tracking-widest text-brand-red">
@@ -174,19 +266,6 @@ export default function AboutPage() {
             <span className="text-sm font-bold">강사진 자세히 보기</span>
             <span className="text-brand-gray">&rarr;</span>
           </Link>
-        </div>
-
-        {/* 하단 CTA */}
-        <div className="rounded-2xl bg-brand-dark p-6 text-center text-white">
-          <p className="text-base font-bold">
-            지금 카카오톡으로 상담받아보세요
-          </p>
-          <a
-            href="http://pf.kakao.com/_kpsxfn" target="_blank" rel="noopener noreferrer"
-            className="mt-3 inline-block rounded-full bg-brand-red px-6 py-3 font-bold text-white"
-          >
-            카카오톡 상담하기 &rarr;
-          </a>
         </div>
       </div>
 
