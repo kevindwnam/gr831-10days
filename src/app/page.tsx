@@ -1,9 +1,12 @@
 import MenuCard from "@/components/MenuCard";
 import SectionHeader from "@/components/SectionHeader";
+import Header from "@/components/Header";
 
 export default function Home() {
   return (
-    <div className="mx-auto max-w-lg px-5 py-6">
+    <>
+      <Header />
+      <div className="mx-auto max-w-lg px-5 pb-6">
       {/* Hero 카드 */}
       <div className="overflow-hidden rounded-2xl border-t-4 border-brand-red bg-white p-6 shadow-sm">
         <p className="text-xs font-bold tracking-widest text-brand-red">
@@ -138,5 +141,6 @@ export default function Home() {
 
       <div className="pb-12" />
     </div>
+    </>
   );
 }
