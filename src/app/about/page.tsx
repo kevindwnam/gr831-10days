@@ -11,7 +11,7 @@ export const metadata: Metadata = {
 
 export default function AboutPage() {
   return (
-    <div className="mx-auto max-w-lg px-5 py-6">
+    <div className="mx-auto max-w-lg md:max-w-2xl lg:max-w-4xl px-5 py-6">
       {/* 상단 헤더 영역 */}
       <div className="flex items-center">
         <Link href="/" className="text-sm text-brand-gray">
@@ -19,7 +19,7 @@ export default function AboutPage() {
         </Link>
       </div>
       <div className="mt-3 text-center">
-        <h1 className="font-serif text-xl font-black">십일전략 소개</h1>
+        <h1 className="font-serif text-xl md:text-2xl font-black">십일전략 소개</h1>
         <p className="mt-1 text-sm text-brand-gray">
           GR831이 만든 공식 온라인 브랜드
         </p>

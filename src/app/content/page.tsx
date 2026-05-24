@@ -11,7 +11,7 @@ export const metadata: Metadata = {
 
 export default function ContentPage() {
   return (
-    <div className="mx-auto max-w-lg px-5 py-6">
+    <div className="mx-auto max-w-lg md:max-w-2xl lg:max-w-4xl px-5 py-6">
       {/* 상단 헤더 */}
       <div className="flex items-center">
         <Link href="/" className="text-sm text-brand-gray">
@@ -19,7 +19,7 @@ export default function ContentPage() {
         </Link>
       </div>
       <div className="mt-3 text-center">
-        <h1 className="font-serif text-xl font-black">콘텐츠 &amp; 학습</h1>
+        <h1 className="font-serif text-xl md:text-2xl font-black">콘텐츠 &amp; 학습</h1>
         <p className="mt-1 text-sm text-brand-gray">
           47회 모의고사 · 학습 자료 · 매일국어 · 학습웹 · 성적표 · Q&amp;A
         </p>

@@ -6,20 +6,20 @@ export default function Home() {
   return (
     <>
       <Header />
-      <div className="mx-auto max-w-lg px-5 pb-6">
+      <div className="mx-auto max-w-lg md:max-w-2xl lg:max-w-4xl px-5 pb-6">
       {/* Hero 카드 */}
-      <div className="overflow-hidden rounded-2xl border-t-4 border-brand-red bg-white p-6 shadow-sm">
+      <div className="overflow-hidden rounded-2xl border-t-4 border-brand-red bg-white p-6 md:p-8 shadow-sm">
         <p className="text-xs font-bold tracking-widest text-brand-red">
           ABBREVIATED ESSAY · 약술형논술 전문
         </p>
 
-        <h1 className="mt-4 font-serif text-2xl font-black leading-tight">
+        <h1 className="mt-4 font-serif text-2xl md:text-3xl font-black leading-tight">
           약술형논술로 만든
           <br />
           <span className="text-brand-red">합격의 공식</span>
         </h1>
 
-        <p className="mt-4 text-sm leading-relaxed text-brand-gray">
+        <p className="mt-4 text-sm md:text-base leading-relaxed text-brand-gray">
           <strong className="text-brand-black">십일전략</strong>은 2026학년도{" "}
           <strong className="text-brand-black">가천대 135명 합격</strong>을 만든{" "}
           <strong className="text-brand-black">
@@ -59,7 +59,7 @@ export default function Home() {
               <p className="text-[10px] text-brand-gray">25학년도</p>
             </div>
             <div className="text-center">
-              <p className="font-serif text-3xl font-black text-brand-red">
+              <p className="font-serif text-3xl md:text-4xl font-black text-brand-red">
                 135
               </p>
               <p className="text-[10px] font-bold text-brand-red">26학년도</p>
@@ -74,7 +74,7 @@ export default function Home() {
       {/* 섹션 1: 약술형 논술 가이드 */}
       <div className="mt-8">
         <SectionHeader title="약술형 논술 가이드" subtitle="전반적인 궁금증 해소" />
-        <div className="mt-3 flex flex-col gap-3">
+        <div className="mt-3 flex flex-col md:grid md:grid-cols-2 gap-3">
           <MenuCard
             icon="🏆"
             title="십일전략 소개"
@@ -111,7 +111,7 @@ export default function Home() {
       {/* 섹션 2: 십일전략 바로 알기 */}
       <div className="mt-8">
         <SectionHeader title="십일전략 바로 알기" subtitle="수업 · 콘텐츠 · 합격생" />
-        <div className="mt-3 flex flex-col gap-3">
+        <div className="mt-3 flex flex-col md:grid md:grid-cols-2 gap-3">
           <MenuCard
             icon="📅"
             title="커리큘럼"

@@ -31,7 +31,7 @@ export default async function UniversityDetailPage({
   if (!u) notFound();
 
   return (
-    <div className="mx-auto max-w-lg px-5 py-6">
+    <div className="mx-auto max-w-lg md:max-w-2xl lg:max-w-4xl px-5 py-6">
       {/* 상단 헤더 */}
       <div className="flex items-center">
         <Link href="/universities" className="text-sm text-brand-gray">

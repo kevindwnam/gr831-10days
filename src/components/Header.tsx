@@ -3,7 +3,7 @@ import Link from "next/link";
 export default function Header() {
   return (
     <header className="py-6">
-      <div className="mx-auto max-w-lg px-5 text-center">
+      <div className="mx-auto max-w-lg md:max-w-2xl lg:max-w-4xl px-5 text-center">
         <Link href="/" className="inline-block">
           <div className="font-serif text-4xl tracking-tight">
             <span className="font-black text-brand-red">十日</span>
