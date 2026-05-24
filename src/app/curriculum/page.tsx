@@ -35,6 +35,46 @@ export default function CurriculumPage() {
           </p>
         </div>
 
+        {/* 인강 vs 십일전략 비교 카드 */}
+        <div className="rounded-2xl bg-white p-6">
+          <p className="text-xs font-bold tracking-widest text-brand-red">
+            WHY 십일전략
+          </p>
+          <h2 className="mt-1 font-serif text-lg font-bold">
+            왜 인강이 아니라 라이브 수업인가
+          </h2>
+          <p className="mt-3 text-sm leading-relaxed text-brand-black">
+            십일전략은 단순한 인강이 아닙니다. 실시간으로 강사진과 소통하며 학습
+            데이터까지 분석되는 양방향 참여형 수업입니다.
+          </p>
+
+          <div className="mt-5 overflow-hidden rounded-xl border border-brand-border">
+            <div className="grid grid-cols-3 gap-2 bg-gray-50 p-3 text-xs font-bold">
+              <span className="text-brand-gray">구분</span>
+              <span className="text-center text-brand-gray">기존 인강</span>
+              <span className="text-center text-brand-red">십일전략</span>
+            </div>
+            <div className="divide-y divide-brand-border">
+              {[
+                ["소통", "일방적", "양방향 실시간"],
+                ["몰입도", "낮음", "최고"],
+                ["피드백", "거의 없음", "실시간 가능"],
+                ["학습 데이터", "없음", "패턴 분석"],
+                ["반복 학습", "녹화만", "라이브+녹화"],
+              ].map(([label, old, strategy]) => (
+                <div
+                  key={label}
+                  className="grid grid-cols-3 items-center gap-2 p-3 text-xs"
+                >
+                  <span className="font-bold">{label}</span>
+                  <span className="text-center text-brand-gray">{old}</span>
+                  <span className="text-center font-bold">{strategy}</span>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+
         {/* 카드 2: 모의고사 정규반 */}
         <div className="overflow-hidden rounded-2xl border-t-4 border-brand-red bg-white p-6">
           <p className="text-xs font-bold tracking-widest text-brand-red">
@@ -65,29 +105,78 @@ export default function CurriculumPage() {
             </div>
           </div>
 
+          {/* 타임 테이블 */}
           <p className="mt-5 text-base font-bold">타임 테이블</p>
           <div className="mt-2 overflow-hidden rounded-lg border border-brand-border">
-            <div className="grid grid-cols-[1fr_1.2fr] bg-brand-dark text-xs text-white">
+            <div className="grid grid-cols-[1fr_1.4fr] bg-brand-dark text-xs text-white">
               <span className="px-3 py-2">시간</span>
               <span className="px-3 py-2">내용</span>
             </div>
-            {[
-              ["18:00 ~ 18:15 (15분)", "100점 만들기"],
-              ["18:20 ~ 19:25 (65분)", "실전 모의고사 응시"],
-              ["19:30 ~ 20:20 (50분)", "국어 해설강의"],
-              ["20:20 ~ 22:00 (100분)", "수학 해설강의"],
-            ].map(([time, content], i) => (
-              <div
-                key={i}
-                className="grid grid-cols-[1fr_1.2fr] border-b border-brand-border text-sm last:border-b-0"
-              >
-                <span className="px-3 py-2 text-brand-gray">{time}</span>
-                <span className="px-3 py-2 text-brand-black">{content}</span>
+            <div className="grid grid-cols-[1fr_1.4fr] border-b border-brand-border text-sm">
+              <span className="px-3 py-2 text-brand-gray">
+                17:45 ~ 18:00
+              </span>
+              <span className="px-3 py-2 text-brand-black">
+                등원 &amp; 준비 (패드 확인)
+              </span>
+            </div>
+            <div className="grid grid-cols-[1fr_1.4fr] border-b border-brand-border bg-gray-50 text-sm">
+              <span className="px-3 py-2 font-bold">18:00 ~ 19:15</span>
+              <div className="px-3 py-2">
+                <p className="font-bold">모의고사 75분</p>
+                <p className="mt-1 text-xs text-brand-gray">
+                  수학 8문항 · 국어 8문항 출제
+                </p>
+                <p className="text-xs text-brand-gray">
+                  · 자연계: 수학 8 + 국어 5 (13문항)
+                </p>
+                <p className="text-xs text-brand-gray">
+                  · 인문계: 수학 5 + 국어 8 (13문항)
+                </p>
               </div>
-            ))}
+            </div>
+            <div className="grid grid-cols-[1fr_1.4fr] text-sm">
+              <span className="px-3 py-2 text-brand-gray">
+                19:20 ~ 22:00
+              </span>
+              <div className="px-3 py-2">
+                <p>수학 및 국어 해설강의</p>
+                <p className="mt-1 text-xs text-brand-gray">
+                  시험시간에 풀이하지 않은 문제도 모두 수강·학습
+                </p>
+              </div>
+            </div>
           </div>
 
-          <p className="mt-5 text-base font-bold">수업 방식 미리보기</p>
+          {/* 하루 수업의 4단계 흐름 */}
+          <div className="mt-6">
+            <p className="text-base font-bold">하루 수업의 4단계 흐름</p>
+            <div className="mt-3 space-y-2">
+              {[
+                ["1", "75분 시험", "ClassIn 시험감독"],
+                ["2", "10분 휴식", "간단한 질문 가능"],
+                ["3", "풀이 수업", "국어 · 수학Ⅰ · 수학Ⅱ"],
+                ["4", "질문방", "강사·조교·동료와 소통"],
+              ].map(([num, title, sub]) => (
+                <div key={num} className="flex items-center gap-3">
+                  <div className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-brand-red text-xs font-bold text-white">
+                    {num}
+                  </div>
+                  <div>
+                    <p className="text-sm font-bold">{title}</p>
+                    <p className="text-xs text-brand-gray">{sub}</p>
+                  </div>
+                </div>
+              ))}
+            </div>
+            <div className="mt-3 rounded-lg bg-gray-50 p-3 text-center text-xs text-brand-gray">
+              💡 &ldquo;시험 → 풀이 → 질문&rdquo;의 빠른 루프로 학습 효율
+              극대화
+            </div>
+          </div>
+
+          {/* 수업 방식 미리보기 */}
+          <p className="mt-6 text-base font-bold">수업 방식 미리보기</p>
           <div className="mt-2 flex flex-col gap-2">
             {[
               "실전감각 UP! 철저한 감독 하에 진행되는 모의고사",
@@ -101,7 +190,6 @@ export default function CurriculumPage() {
               </div>
             ))}
           </div>
-
         </div>
 
         {/* 카드 3: 개념반 */}
